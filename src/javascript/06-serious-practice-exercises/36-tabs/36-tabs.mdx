@@ -14,9 +14,9 @@ In this example we are going to build tabs.
 
 Tabs are pretty simple, you click on the tab you want and it shows the content associated with it.
 
-In this example we will practice showing/hiding things, event listeners, looping before we even learn and wee will learn how to make it accessible.
+In this example we will practice showing/hiding things, event listeners, looping, and we will learn how to make it accessible.
 
-The user should be able to use their keyboard to move between tabs without touching mouse.
+The user should be able to use their keyboard to move between tabs without touching their mouse.
 
 Let's start by looking at the HTML we will be working with.
 
@@ -51,7 +51,7 @@ Let's start by looking at the HTML we will be working with.
 
 We have a wrapper div with a class of "tabs" and nested within div is another div but this one has a role of `tablist`
 
-You will notice a lot of role and aria labels in the HTML and that is important because it is how you make your tabs accessible to everyone and that search engines can easily read it.
+You will notice a lot of role and aria labels in the HTML and that is important because it is how you make your tabs accessible to everyone and search engines can easily read it.
 
 When you use proper markup, it is good for both **accessibility** and **SEO**.
 
@@ -95,7 +95,7 @@ We can associate a tab panel with a specific button by giving it an `aria-labell
 
 That is just descriptions, this aria-labels we are adding is not giving us any sort of functionality. It is just a good way to describe markup in the browser.
 
-Npw you can apply an attribute of `hidden` to the non-selected tab.
+Now you can apply an attribute of `hidden` to the non-selected tab.
 
 The `hidden` attribute is great because you don't have to write any CSS classes to hide it. You just pop that attribute on or off and it will show and hide it.
 
@@ -258,7 +258,7 @@ If you click on the JavaScript button which still looks selected, and flip to th
 
 So why is it not updating?
 
-If you flip back to the elements tab, you will see the attribute value equals true. It never updated.  What happened!?
+If you flip back to the elements tab, you will see the attribute value equals true. It never updated. What happened!?
 
 What happened is that with most properties in JavaScript, you can just access the property on the element directly.
 
@@ -285,6 +285,7 @@ function handleTabClick(event) {
     // tab.ariaSelected = false;
     tab.setAttribute('aria-selected', false);
   });
+}
 ```
 
 If you were to refresh the page and click one of the tabs, all the tabs will no longer be selected.
@@ -350,7 +351,7 @@ function handleTabClick(event) {
   const { id } = event.currentTarget;
 ```
 
-Now you need to find the associate tab panel.
+Now you need to find the associated tab panel.
 
 There are a couple of ways you can do that.
 
